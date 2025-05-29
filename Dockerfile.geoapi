@@ -1,0 +1,10 @@
+FROM node:18
+
+WORKDIR /app
+COPY geo.js package*.json ./
+
+RUN npm install
+
+EXPOSE 3100
+
+CMD ["node", "geo.js"]
